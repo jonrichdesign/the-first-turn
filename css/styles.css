@@ -1,0 +1,517 @@
+/* ========================================
+   FONTS
+   ======================================== */
+
+@font-face {
+    font-family: 'Refraktury';
+    src: url('../fonts/Refraktury.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ========================================
+   CSS CUSTOM PROPERTIES (THEMES)
+   ======================================== */
+
+:root {
+    /* Default theme (muted creams and browns) */
+    --bg-color: #f5f1e8;
+    --text-color: #4a3f35;
+    --accent-color: #8b7355;
+    --card-bg: #fffef9;
+    --card-border: #d4c4a8;
+    --button-bg: #e8dcc8;
+    --button-hover: #d4c4a8;
+    --button-active: #8b7355;
+
+    /* Typography */
+    --font-display: 'Refraktury', Georgia, serif;
+    --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+
+    /* Spacing */
+    --space-xs: 0.45rem;
+    --space-sm: 0.9rem;
+    --space-md: 1.35rem;
+    --space-lg: 1.8rem;
+    --space-xl: 2.7rem;
+
+    /* Card dimensions */
+    --card-width: 300px;
+    --card-height: 400px;
+
+    /* Transitions */
+    --transition-speed: 0.3s;
+    --flip-speed: 0.6s;
+}
+
+/* Beach theme */
+body.theme-beach {
+    --bg-color: #e8f2f7;
+    --text-color: #2c4a5a;
+    --accent-color: #5a8ca8;
+    --card-bg: #f8fcfe;
+    --card-border: #b8d8e8;
+    --button-bg: #d0e8f2;
+    --button-hover: #b8d8e8;
+    --button-active: #5a8ca8;
+}
+
+/* Forest theme */
+body.theme-forest {
+    --bg-color: #e8f2e8;
+    --text-color: #2d4a2d;
+    --accent-color: #5a8c5a;
+    --card-bg: #f8fef8;
+    --card-border: #b8d8b8;
+    --button-bg: #d0f2d0;
+    --button-hover: #b8d8b8;
+    --button-active: #5a8c5a;
+}
+
+/* Park theme */
+body.theme-park {
+    --bg-color: #fef5e8;
+    --text-color: #5a4a2c;
+    --accent-color: #d8955a;
+    --card-bg: #fffef8;
+    --card-border: #e8d4b8;
+    --button-bg: #ffe8c8;
+    --button-hover: #e8d4b8;
+    --button-active: #d8955a;
+}
+
+/* ========================================
+   RESET & BASE
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background-color var(--transition-speed) ease,
+                color var(--transition-speed) ease;
+}
+
+/* ========================================
+   LAYOUT
+   ======================================== */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--space-md);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+header {
+    text-align: center;
+    padding: var(--space-sm) 0;
+}
+
+.title {
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    font-weight: normal;
+    color: var(--accent-color);
+    margin-bottom: var(--space-xs);
+    letter-spacing: 0.05em;
+}
+
+.strapline {
+    font-size: 1rem;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* ========================================
+   HABITAT SELECTOR
+   ======================================== */
+
+.habitat-selector {
+    text-align: center;
+}
+
+.habitat-selector label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: var(--space-sm);
+    font-weight: 500;
+}
+
+.selector-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.habitat-btn {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    padding: var(--space-sm) var(--space-md);
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    border: 2px solid var(--card-border);
+    border-radius: 0;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    min-width: 90px;
+    margin-left: -2px;
+}
+
+.habitat-btn:first-child {
+    margin-left: 0;
+    border-radius: 8px 0 0 8px;
+}
+
+.habitat-btn:last-child {
+    border-radius: 0 8px 8px 0;
+}
+
+.habitat-btn:hover {
+    background-color: var(--button-hover);
+    position: relative;
+    z-index: 1;
+}
+
+.habitat-btn:active {
+    transform: translateY(0);
+}
+
+.habitat-btn.active {
+    background-color: var(--button-active);
+    color: white;
+    border-color: var(--button-active);
+    position: relative;
+    z-index: 2;
+}
+
+.habitat-btn:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+    position: relative;
+    z-index: 3;
+}
+
+/* ========================================
+   CARD CONTAINER
+   ======================================== */
+
+.card-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-md) 0;
+    perspective: 1000px;
+}
+
+/* ========================================
+   CARD (3D FLIP)
+   ======================================== */
+
+.card {
+    width: var(--card-width);
+    height: var(--card-height);
+    position: relative;
+    cursor: pointer;
+    transition: transform var(--transition-speed) ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card:active {
+    transform: scale(0.98);
+}
+
+.card:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 8px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform var(--flip-speed) ease;
+    transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-back,
+.card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.card-back {
+    background-color: var(--card-bg);
+    color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--card-border);
+}
+
+.card-back svg {
+    width: 100%;
+    height: 100%;
+}
+
+.card-back-title {
+    font-family: var(--font-display);
+    font-size: 18px;
+    letter-spacing: 0.1em;
+}
+
+.card-front {
+    background-color: var(--card-bg);
+    transform: rotateY(180deg);
+    border: 3px solid var(--card-border);
+}
+
+/* ========================================
+   CARD FRONT CONTENT
+   ======================================== */
+
+.card-border {
+    width: 100%;
+    height: 100%;
+    padding: var(--space-md);
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+    text-align: center;
+    padding: var(--space-md);
+    height: 100%;
+    justify-content: space-between;
+}
+
+.habitat-icon {
+    color: var(--accent-color);
+    opacity: 0.6;
+}
+
+.card-title {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: normal;
+    color: var(--accent-color);
+    line-height: 1.3;
+}
+
+.card-body {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 240px;
+}
+
+.card-location {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    opacity: 0.7;
+    margin-top: auto;
+}
+
+/* ========================================
+   INDIVIDUAL CARD THEMING (for "All" mode)
+   ======================================== */
+
+/* Beach card colors */
+.card[data-card-habitat="beach"] .card-front {
+    border-color: #b8d8e8;
+}
+
+.card[data-card-habitat="beach"] .card-border {
+    border-color: #5a8ca8;
+}
+
+.card[data-card-habitat="beach"] .card-title,
+.card[data-card-habitat="beach"] .habitat-icon,
+.card[data-card-habitat="beach"] .card-location {
+    color: #5a8ca8;
+}
+
+/* Forest card colors */
+.card[data-card-habitat="forest"] .card-front {
+    border-color: #b8d8b8;
+}
+
+.card[data-card-habitat="forest"] .card-border {
+    border-color: #5a8c5a;
+}
+
+.card[data-card-habitat="forest"] .card-title,
+.card[data-card-habitat="forest"] .habitat-icon,
+.card[data-card-habitat="forest"] .card-location {
+    color: #5a8c5a;
+}
+
+/* Park card colors */
+.card[data-card-habitat="park"] .card-front {
+    border-color: #e8d4b8;
+}
+
+.card[data-card-habitat="park"] .card-border {
+    border-color: #d8955a;
+}
+
+.card[data-card-habitat="park"] .card-title,
+.card[data-card-habitat="park"] .habitat-icon,
+.card[data-card-habitat="park"] .card-location {
+    color: #d8955a;
+}
+
+/* ========================================
+   PROJECT EXPLANATION
+   ======================================== */
+
+.project-explanation {
+    text-align: center;
+    padding: var(--space-xl) var(--space-md) var(--space-md);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.project-explanation p {
+    font-size: 0.9rem;
+    line-height: 2;
+    opacity: 0.5;
+    margin: 0;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+footer {
+    text-align: center;
+    padding: var(--space-md) 0;
+    margin-top: auto;
+}
+
+.attribution {
+    font-size: 0.875rem;
+    opacity: 0.6;
+}
+
+.attribution a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .strapline {
+        font-size: 0.9rem;
+    }
+
+    :root {
+        --card-width: 280px;
+        --card-height: 380px;
+    }
+
+    .selector-buttons {
+        width: 100%;
+    }
+
+    .habitat-btn {
+        flex: 1;
+        min-width: 70px;
+        padding: var(--space-sm);
+        font-size: 0.9rem;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+    }
+
+    .card-body {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    :root {
+        --card-width: 260px;
+        --card-height: 360px;
+        --space-md: 1rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .selector-buttons {
+        flex-direction: column;
+    }
+
+    .habitat-btn {
+        width: 100%;
+        margin-left: 0;
+        margin-top: -2px;
+        border-radius: 0;
+    }
+
+    .habitat-btn:first-child {
+        margin-top: 0;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .habitat-btn:last-child {
+        border-radius: 0 0 8px 8px;
+    }
+}
+
+/* ========================================
+   LOADING STATE
+   ======================================== */
+
+.card.loading {
+    pointer-events: none;
+    opacity: 0.6;
+}

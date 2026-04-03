@@ -1,0 +1,32 @@
+[
+  {
+    "habitat": "beach",
+    "title": "The Mysterious Shell",
+    "body": "You find a shell that whispers secrets of the ocean. What do you hear?"
+  },
+  {
+    "habitat": "beach",
+    "title": "The Sand Castle Guardian",
+    "body": "A tiny crab asks you to help protect its sand castle kingdom from the tide."
+  },
+  {
+    "habitat": "forest",
+    "title": "The Talking Oak",
+    "body": "An ancient tree speaks! It needs your help to find its lost acorns."
+  },
+  {
+    "habitat": "forest",
+    "title": "The Fairy Ring",
+    "body": "You discover a circle of mushrooms. Step inside and see what happens..."
+  },
+  {
+    "habitat": "park",
+    "title": "The Flying Frisbee",
+    "body": "A magical frisbee lands at your feet and refuses to stay on the ground!"
+  },
+  {
+    "habitat": "park",
+    "title": "The Invisible Friend",
+    "body": "Someone is giggling nearby, but you can't see them. Can you find them?"
+  }
+]

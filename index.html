@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quest Cards – Turn over a card and start your adventure...</title>
+    <meta name="description" content="Imaginative role play games for parents and children">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1 class="title">Quest Cards</h1>
+            <p class="strapline">Turn over a card and start your adventure...</p>
+        </header>
+
+        <section class="habitat-selector" aria-label="Habitat selector">
+            <label for="habitat">Where are you?</label>
+            <div class="selector-buttons" role="group" id="habitat">
+                <button class="habitat-btn" data-habitat="beach" aria-pressed="false">Beach</button>
+                <button class="habitat-btn" data-habitat="forest" aria-pressed="false">Forest</button>
+                <button class="habitat-btn" data-habitat="park" aria-pressed="false">Park</button>
+                <button class="habitat-btn active" data-habitat="all" aria-pressed="true">Anywhere</button>
+            </div>
+        </section>
+
+        <section class="card-container" aria-live="polite">
+            <div class="card" role="button" tabindex="0" aria-label="Quest card - click to reveal">
+                <div class="card-inner">
+                    <div class="card-back">
+                        <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <!-- Decorative border -->
+                            <rect x="15" y="15" width="270" height="370" rx="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <rect x="25" y="25" width="250" height="350" rx="4" fill="none" stroke="currentColor" stroke-width="1"/>
+
+                            <!-- Center ornamental circle -->
+                            <circle cx="150" cy="200" r="60" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                            <circle cx="150" cy="200" r="50" fill="none" stroke="currentColor" stroke-width="1"/>
+
+                            <!-- Quest Cards text -->
+                            <text x="150" y="195" text-anchor="middle" class="card-back-title" fill="currentColor">Quest</text>
+                            <text x="150" y="210" text-anchor="middle" class="card-back-title" fill="currentColor">Cards</text>
+
+                            <!-- Icon: Wand (top) -->
+                            <g transform="translate(150, 80)">
+                                <line x1="0" y1="-15" x2="0" y2="15" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M -5,-15 L 0,-22 L 5,-15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                                <circle cx="0" cy="-18" r="1.5" fill="currentColor"/>
+                            </g>
+
+                            <!-- Icon: Cutlass (right) -->
+                            <g transform="translate(210, 200)">
+                                <path d="M -15,-10 Q -8,-10 -5,-5 L 10,10 L 8,12 L -7,-3 Q -10,-6 -15,-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                                <circle cx="-14" cy="-8" r="2" fill="none" stroke="currentColor" stroke-width="1"/>
+                            </g>
+
+                            <!-- Icon: Leaf (bottom) -->
+                            <g transform="translate(150, 320)">
+                                <path d="M 0,-15 Q 8,-10 10,0 Q 8,5 0,8 Q -8,5 -10,0 Q -8,-10 0,-15" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                <line x1="0" y1="-15" x2="0" y2="8" stroke="currentColor" stroke-width="1"/>
+                            </g>
+
+                            <!-- Icon: Gemstone (left) -->
+                            <g transform="translate(90, 200)">
+                                <path d="M -8,-8 L 0,-12 L 8,-8 L 10,0 L 0,12 L -10,0 Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                                <line x1="-8" y1="-8" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+                                <line x1="8" y1="-8" x2="0" y2="0" stroke="currentColor" stroke-width="1"/>
+                            </g>
+
+                            <!-- Corner flourishes -->
+                            <circle cx="40" cy="40" r="2" fill="currentColor"/>
+                            <circle cx="260" cy="40" r="2" fill="currentColor"/>
+                            <circle cx="40" cy="360" r="2" fill="currentColor"/>
+                            <circle cx="260" cy="360" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="card-front">
+                        <div class="card-border">
+                            <div class="card-content">
+                                <svg class="habitat-icon" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                                    <!-- Icon will be injected by JS based on habitat -->
+                                </svg>
+                                <h2 class="card-title"></h2>
+                                <p class="card-body"></p>
+                                <p class="card-location"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-explanation">
+            <p>Sometimes all you need is a small nudge to begin.</p>
+            <p>Turn a card and follow where it leads you.</p>
+            <p>Take it, twist it, or make it your own story.</p>
+            <p>There's magic in playing together.</p>
+        </section>
+
+        <footer>
+            <p class="attribution">Designed and built by <a href="https://jonri.ch" target="_blank" rel="noopener">jonri.ch</a>. Refraktury typeface by csyde, licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a></p>
+        </footer>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
