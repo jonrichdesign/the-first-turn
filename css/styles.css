@@ -456,7 +456,8 @@ footer {
     }
 
     .selector-buttons {
-        width: 100%;
+        width: var(--card-width);
+        margin: 0 auto;
     }
 
     .habitat-btn {
@@ -488,6 +489,8 @@ footer {
 
     .selector-buttons {
         flex-direction: column;
+        width: var(--card-width);
+        margin: 0 auto;
     }
 
     .habitat-btn {
