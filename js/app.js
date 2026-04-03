@@ -42,6 +42,12 @@ class QuestCards {
                 throw new Error(`Failed to load cards: ${response.status}`);
             }
             this.allCards = await response.json();
+
+            // Add unique index to each card for URL sharing
+            this.allCards.forEach((card, index) => {
+                card.id = index;
+            });
+
             this.resetCardPool();
         } catch (error) {
             console.error('Error loading cards:', error);
@@ -93,8 +99,8 @@ class QuestCards {
     // CARD DISPLAY
     // ========================================
 
-    revealCard() {
-        const card = this.drawCard();
+    revealCard(specificCard = null) {
+        const card = specificCard || this.drawCard();
 
         // Update card content
         this.cardTitle.textContent = card.title;
@@ -114,6 +120,9 @@ class QuestCards {
         if (this.currentHabitat !== 'all') {
             this.updateTheme(card.habitat);
         }
+
+        // Update URL with current card
+        this.updateURL(card.id);
 
         // Update aria-label
         this.card.setAttribute('aria-label', `Quest card: ${card.title} - Click for next card`);
@@ -211,22 +220,45 @@ class QuestCards {
     // URL STATE MANAGEMENT
     // ========================================
 
-    updateURL() {
+    updateURL(cardId = null) {
         const url = new URL(window.location);
+
+        // Update habitat parameter
         if (this.currentHabitat === 'all') {
             url.searchParams.delete('habitat');
         } else {
             url.searchParams.set('habitat', this.currentHabitat);
         }
+
+        // Update card parameter
+        if (cardId !== null) {
+            url.searchParams.set('card', cardId);
+        } else {
+            url.searchParams.delete('card');
+        }
+
         window.history.replaceState({}, '', url);
     }
 
     loadStateFromURL() {
         const url = new URL(window.location);
         const habitat = url.searchParams.get('habitat');
+        const cardId = url.searchParams.get('card');
 
+        // Set habitat first
         if (habitat && ['beach', 'forest', 'park'].includes(habitat)) {
             this.selectHabitat(habitat);
+        }
+
+        // If a specific card is requested, show it
+        if (cardId !== null) {
+            const cardIndex = parseInt(cardId, 10);
+            const card = this.allCards[cardIndex];
+
+            if (card) {
+                // Show the specific card directly
+                this.revealCard(card);
+            }
         }
     }
 
