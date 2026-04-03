@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, height=630">
+    <title>The First Turn - Social Card</title>
+    <style>
+        @font-face {
+            font-family: 'Refraktury';
+            src: url('fonts/Refraktury.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 1200px;
+            height: 630px;
+            background: linear-gradient(135deg, #f5f1e8 0%, #e8dcc8 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 60px;
+            max-width: 900px;
+        }
+
+        .title {
+            font-family: 'Refraktury', Georgia, serif;
+            font-size: 120px;
+            color: #8b7355;
+            margin-bottom: 30px;
+            letter-spacing: 0.05em;
+        }
+
+        .strapline {
+            font-size: 32px;
+            color: #4a3f35;
+            font-style: italic;
+            opacity: 0.8;
+            margin-bottom: 50px;
+            line-height: 1.5;
+        }
+
+        .description {
+            font-size: 24px;
+            color: #4a3f35;
+            line-height: 2;
+            opacity: 0.6;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .description p {
+            margin: 0;
+        }
+
+        /* Decorative elements */
+        .ornament {
+            position: absolute;
+            opacity: 0.1;
+        }
+
+        .ornament-tl {
+            top: 40px;
+            left: 40px;
+            width: 100px;
+            height: 100px;
+        }
+
+        .ornament-br {
+            bottom: 40px;
+            right: 40px;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Decorative ornaments -->
+    <svg class="ornament ornament-tl" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="40" fill="none" stroke="#8b7355" stroke-width="2"/>
+        <path d="M 50,10 L 55,25 L 70,20 L 60,35 L 75,40 L 60,45 L 70,60 L 55,55 L 50,70 L 45,55 L 30,60 L 40,45 L 25,40 L 40,35 L 30,20 L 45,25 Z" fill="#8b7355"/>
+    </svg>
+
+    <svg class="ornament ornament-br" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="40" fill="none" stroke="#8b7355" stroke-width="2"/>
+        <path d="M 50,10 L 55,25 L 70,20 L 60,35 L 75,40 L 60,45 L 70,60 L 55,55 L 50,70 L 45,55 L 30,60 L 40,45 L 25,40 L 40,35 L 30,20 L 45,25 Z" fill="#8b7355"/>
+    </svg>
+
+    <div class="container">
+        <h1 class="title">The First Turn</h1>
+        <p class="strapline">Turn over a card and start your adventure...</p>
+        <div class="description">
+            <p>Sometimes all you need is a small nudge to begin.</p>
+            <p>There's magic in playing together.</p>
+        </div>
+    </div>
+</body>
+</html>
