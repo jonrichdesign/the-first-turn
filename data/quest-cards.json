@@ -1,32 +1,152 @@
 [
   {
     "habitat": "beach",
-    "title": "The Mysterious Shell",
-    "body": "You find a shell that whispers secrets of the ocean. What do you hear?"
+    "title": "The Sleeping Tide",
+    "body": "The sea has left three treasures for brave explorers. Find them before the tide wakes and the next wave-song begins."
   },
   {
     "habitat": "beach",
-    "title": "The Sand Castle Guardian",
-    "body": "A tiny crab asks you to help protect its sand castle kingdom from the tide."
+    "title": "Shell Listeners",
+    "body": "The merrow left five singing shells along the waterline last night. Gather them and line them up from smallest voice to loudest."
+  },
+  {
+    "habitat": "beach",
+    "title": "Gull Dancers",
+    "body": "The silver gulls are teaching their storm-dance to anyone brave enough to learn. Watch their wings closely, then show me the pattern."
+  },
+  {
+    "habitat": "beach",
+    "title": "Captain Greysail's Landing",
+    "body": "A ghost ship arrived at midnight and left footprints in the sand. Follow Captain Greysail's trail and tell me what treasure he buried."
+  },
+  {
+    "habitat": "beach",
+    "title": "Wave Jumpers",
+    "body": "The wave-riders are testing you with ten rolling waves. Jump over every third one and bow low beneath the rest."
+  },
+  {
+    "habitat": "beach",
+    "title": "Foam Collectors",
+    "body": "The sea is weaving cloud-bubbles where the waves break white. Catch three handfuls of foam before they melt back into salt water."
+  },
+  {
+    "habitat": "beach",
+    "title": "Crab Messengers",
+    "body": "The sideways-walking crabs carry urgent messages from rock pool to rock pool. Move like them—low, swift, and never in a straight line."
+  },
+  {
+    "habitat": "beach",
+    "title": "The Serpent's Resting Place",
+    "body": "A sea serpent needs somewhere safe to sleep before sunset. Build it a castle of sand, strong enough to hold dreams."
+  },
+  {
+    "habitat": "beach",
+    "title": "Tide Pool Watchers",
+    "body": "A tiny kingdom lives in this pool between the rocks. Kneel down like a giant and count every creature that moves."
+  },
+  {
+    "habitat": "beach",
+    "title": "The Uncharted Isle",
+    "body": "Use driftwood and stones to map an island no sailor has ever found. Mark where the dragon sleeps and where the treasure's buried."
   },
   {
     "habitat": "forest",
-    "title": "The Talking Oak",
-    "body": "An ancient tree speaks! It needs your help to find its lost acorns."
+    "title": "The Moss Path",
+    "body": "The greenway only appears for those who step softly. Walk only on moss, never bare earth, until you find something perfectly round."
   },
   {
     "habitat": "forest",
-    "title": "The Fairy Ring",
-    "body": "You discover a circle of mushrooms. Step inside and see what happens..."
+    "title": "Leaf Weavers",
+    "body": "The forest keeper needs seven different leaf shapes for an ancient pattern. Find them and lay them in a circle beneath the oldest tree."
+  },
+  {
+    "habitat": "forest",
+    "title": "Bridge for the Small Folk",
+    "body": "The beetle kingdom can't cross the muddy stream without help. Build them a bridge from fallen twigs and bark."
+  },
+  {
+    "habitat": "forest",
+    "title": "Tree Whisperers",
+    "body": "Find the oldest tree—the one the birds call Elder. Press your ear against its bark and listen for the heartbeat underneath."
+  },
+  {
+    "habitat": "forest",
+    "title": "Root Walkers",
+    "body": "The twisting roots are an enchanted balance course set by the wood sprites. Walk heel-to-toe along them without touching the ground."
+  },
+  {
+    "habitat": "forest",
+    "title": "The Hidden Door",
+    "body": "Somewhere here stands a door to the hollow hills, hidden where only sharp eyes look. Search low—between roots, under ferns, behind peeling bark."
+  },
+  {
+    "habitat": "forest",
+    "title": "The Forest's Song",
+    "body": "The thrushes are waiting for you to join the morning chorus. Sing three clear notes, then listen and copy whatever the wood sings back."
+  },
+  {
+    "habitat": "forest",
+    "title": "Tracks of the Stag King",
+    "body": "Something with silver antlers passed through at dawn and left signs. Follow the clues—hoof prints, bent grass, scattered acorns—and tell me where it went."
+  },
+  {
+    "habitat": "forest",
+    "title": "The Wishing Circle",
+    "body": "Build a ring of stones, acorns, and feathers in a place where sunlight touches the ground. Stand inside, close your eyes, and speak one true wish."
+  },
+  {
+    "habitat": "forest",
+    "title": "Fern Counters",
+    "body": "The fiddlehead ferns are uncurling like questions the forest is asking. Find a patch and count how many are still curled tight in their dreams."
   },
   {
     "habitat": "park",
-    "title": "The Flying Frisbee",
-    "body": "A magical frisbee lands at your feet and refuses to stay on the ground!"
+    "title": "Shadow Thieves",
+    "body": "Your shadow is trying to slip away across the grass and hide. Chase it, catch it, then see if you can make it vanish completely."
   },
   {
     "habitat": "park",
-    "title": "The Invisible Friend",
-    "body": "Someone is giggling nearby, but you can't see them. Can you find them?"
+    "title": "Pigeon Messengers",
+    "body": "The grey messengers are delivering invisible letters to every tree in the park. Count them as they fly and guess what news they're carrying."
+  },
+  {
+    "habitat": "park",
+    "title": "Grass Sigils",
+    "body": "Flatten a secret pattern in the long grass—a spell that only works when seen from above. Make it big enough for passing clouds to read."
+  },
+  {
+    "habitat": "park",
+    "title": "The Memory Bench",
+    "body": "This bench remembers everyone who's ever sat here. Sit down, close your eyes, and imagine the person who was here yesterday. What were they dreaming about?"
+  },
+  {
+    "habitat": "park",
+    "title": "Tightrope Walkers",
+    "body": "The path's edge is an invisible rope stretched high above a canyon. Walk it like an acrobat, arms wide, until you reach the safety of the tree."
+  },
+  {
+    "habitat": "park",
+    "title": "Cloud Namers",
+    "body": "The sky-shepherds need help naming today's clouds. Lie on your back, find three different ones, give them proper names, and wave as they journey on."
+  },
+  {
+    "habitat": "park",
+    "title": "The Frame Builders",
+    "body": "Collect four sticks blessed by the wind—one straight, one crooked, one short, one long. Fit them together to frame an invisible painting."
+  },
+  {
+    "habitat": "park",
+    "title": "Wind Listeners",
+    "body": "The wind is playing an old tune in the treetops, older than any song you know. Stand perfectly still and hum along until you learn it."
+  },
+  {
+    "habitat": "park",
+    "title": "The Silly Sprint",
+    "body": "We'll race to that far tree, but there's a rule: we must both run in the silliest way the park has ever seen. Choose your style now."
+  },
+  {
+    "habitat": "park",
+    "title": "Petal Gatherers",
+    "body": "The flowers have scattered their coloured blessings on the ground like confetti. Gather a handful and arrange them in a rainbow for the insects to admire."
   }
 ]
