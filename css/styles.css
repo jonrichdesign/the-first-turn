@@ -322,9 +322,9 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--space-md);
+    gap: var(--space-sm);
     text-align: center;
-    padding: var(--space-md);
+    padding: var(--space-sm) var(--space-md) var(--space-md);
     height: 100%;
     justify-content: space-between;
 }
