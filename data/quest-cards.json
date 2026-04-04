@@ -148,5 +148,55 @@
     "habitat": "park",
     "title": "Petal Gatherers",
     "body": "The flowers have scattered their coloured blessings on the ground like confetti. Gather a handful and arrange them in a rainbow for the insects to admire."
+  },
+  {
+    "habitat": "home",
+    "title": "Cushion Mountain",
+    "body": "The house giants have left their soft mountains scattered everywhere. Build the tallest peak you can, then plant a flag at the summit."
+  },
+  {
+    "habitat": "home",
+    "title": "The Stair Climb",
+    "body": "These stairs lead all the way to the cloud kingdom. Climb them in three different ways—one going up, one coming down, and one that no one's tried before."
+  },
+  {
+    "habitat": "home",
+    "title": "Sunbeam Dancers",
+    "body": "Tiny dancers are spinning in the light from the window. Watch them closely, then move your hands to make them swirl and leap."
+  },
+  {
+    "habitat": "home",
+    "title": "The Blanket Cave",
+    "body": "A secret cave needs building where only the bravest explorers can hide. Use blankets and chairs, and mark the entrance with something special."
+  },
+  {
+    "habitat": "home",
+    "title": "Sock Creatures",
+    "body": "The sock drawer is full of creatures waiting to come alive. Choose two, give them names, and let them tell you their story."
+  },
+  {
+    "habitat": "home",
+    "title": "The Lava Floor",
+    "body": "The floor has turned to bubbling lava and only the furniture can save you. Cross from here to the doorway without touching the ground once."
+  },
+  {
+    "habitat": "home",
+    "title": "Doorway Portals",
+    "body": "Every doorway is a portal to a different world today. Walk through three of them and tell me what kingdom lies on the other side."
+  },
+  {
+    "habitat": "home",
+    "title": "Shadow Puppets",
+    "body": "The wall is waiting for a show and your hands know all the characters. Make three different creatures appear in the light."
+  },
+  {
+    "habitat": "home",
+    "title": "Window Watchers",
+    "body": "Sit by the window and watch the world like a cat watching birds. Count five things moving out there and imagine where each one is going."
+  },
+  {
+    "habitat": "home",
+    "title": "The Silent Creep",
+    "body": "You are a night fox crossing the floorboards while the house sleeps. Creep from here to there without making a single sound."
   }
 ]

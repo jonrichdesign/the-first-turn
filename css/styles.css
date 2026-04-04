@@ -81,6 +81,18 @@ body.theme-park {
     --button-active: #d8955a;
 }
 
+/* Home theme */
+body.theme-home {
+    --bg-color: #f5f1e8;
+    --text-color: #4a3f35;
+    --accent-color: #8b7355;
+    --card-bg: #fffef9;
+    --card-border: #d4c4a8;
+    --button-bg: #e8dcc8;
+    --button-hover: #d4c4a8;
+    --button-active: #8b7355;
+}
+
 /* ========================================
    RESET & BASE
    ======================================== */
@@ -347,8 +359,23 @@ header {
 }
 
 /* ========================================
-   INDIVIDUAL CARD THEMING (for "All" mode)
+   INDIVIDUAL CARD THEMING
    ======================================== */
+
+/* Home card colors */
+.card[data-card-habitat="home"] .card-front {
+    border-color: #d4c4a8;
+}
+
+.card[data-card-habitat="home"] .card-border {
+    border-color: #8b7355;
+}
+
+.card[data-card-habitat="home"] .card-title,
+.card[data-card-habitat="home"] .habitat-icon,
+.card[data-card-habitat="home"] .card-location {
+    color: #8b7355;
+}
 
 /* Beach card colors */
 .card[data-card-habitat="beach"] .card-front {

@@ -6,7 +6,7 @@ class QuestCards {
     constructor() {
         // State
         this.allCards = [];
-        this.currentHabitat = 'all';
+        this.currentHabitat = 'home';
         this.cardPool = [];
         this.usedCards = [];
         this.currentCard = null;
@@ -64,9 +64,7 @@ class QuestCards {
 
     resetCardPool() {
         // Filter cards by current habitat
-        const filteredCards = this.currentHabitat === 'all'
-            ? [...this.allCards]
-            : this.allCards.filter(card => card.habitat === this.currentHabitat);
+        const filteredCards = this.allCards.filter(card => card.habitat === this.currentHabitat);
 
         // Shuffle and reset pool
         this.cardPool = this.shuffle([...filteredCards]);
@@ -115,11 +113,8 @@ class QuestCards {
         this.card.classList.add('flipped');
         this.isFlipped = true;
 
-        // Update theme: only change page theme if specific habitat is selected
-        // If "all" is selected, only the card itself changes color
-        if (this.currentHabitat !== 'all') {
-            this.updateTheme(card.habitat);
-        }
+        // Update theme based on card habitat
+        this.updateTheme(card.habitat);
 
         // Update URL with current card
         this.updateURL(card.id);
@@ -144,6 +139,11 @@ class QuestCards {
 
     updateHabitatIcon(habitat) {
         const icons = {
+            home: `
+                <path d="M16 6 L26 14 L26 26 L6 26 L6 14 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <rect x="13" y="19" width="6" height="7" fill="none" stroke="currentColor" stroke-width="2"/>
+                <line x1="16" y1="6" x2="16" y2="4" stroke="currentColor" stroke-width="2"/>
+            `,
             beach: `
                 <path d="M16 20 Q16 14 10 12 Q16 10 16 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                 <path d="M16 20 Q16 14 22 12 Q16 10 16 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -159,14 +159,10 @@ class QuestCards {
                 <circle cx="16" cy="10" r="6" fill="none" stroke="currentColor" stroke-width="2"/>
                 <line x1="16" y1="16" x2="16" y2="28" stroke="currentColor" stroke-width="2"/>
                 <path d="M10 20 Q10 18 16 18 Q22 18 22 20" fill="none" stroke="currentColor" stroke-width="2"/>
-            `,
-            all: `
-                <circle cx="16" cy="16" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
-                <path d="M16 6 L16 26 M6 16 L26 16" stroke="currentColor" stroke-width="2"/>
             `
         };
 
-        this.habitatIcon.innerHTML = icons[habitat] || icons.all;
+        this.habitatIcon.innerHTML = icons[habitat] || icons.home;
     }
 
     // ========================================
@@ -175,12 +171,10 @@ class QuestCards {
 
     updateTheme(habitat = this.currentHabitat) {
         // Remove all theme classes
-        document.body.classList.remove('theme-beach', 'theme-forest', 'theme-park');
+        document.body.classList.remove('theme-home', 'theme-beach', 'theme-forest', 'theme-park');
 
-        // Add new theme class if not 'all'
-        if (habitat !== 'all') {
-            document.body.classList.add(`theme-${habitat}`);
-        }
+        // Add new theme class
+        document.body.classList.add(`theme-${habitat}`);
     }
 
     // ========================================
@@ -224,11 +218,7 @@ class QuestCards {
         const url = new URL(window.location);
 
         // Update habitat parameter
-        if (this.currentHabitat === 'all') {
-            url.searchParams.delete('habitat');
-        } else {
-            url.searchParams.set('habitat', this.currentHabitat);
-        }
+        url.searchParams.set('habitat', this.currentHabitat);
 
         // Update card parameter
         if (cardId !== null) {
@@ -245,9 +235,11 @@ class QuestCards {
         const habitat = url.searchParams.get('habitat');
         const cardId = url.searchParams.get('card');
 
-        // Set habitat first
-        if (habitat && ['beach', 'forest', 'park'].includes(habitat)) {
+        // Set habitat first (default to home if not specified)
+        if (habitat && ['home', 'beach', 'forest', 'park'].includes(habitat)) {
             this.selectHabitat(habitat);
+        } else {
+            this.selectHabitat('home');
         }
 
         // If a specific card is requested, show it
