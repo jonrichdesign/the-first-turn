@@ -17,7 +17,6 @@ class QuestCards {
         this.cardTitle = document.querySelector('.card-title');
         this.cardBody = document.querySelector('.card-body');
         this.cardLocation = document.querySelector('.card-location');
-        this.habitatIcon = document.querySelector('.habitat-icon');
         this.habitatButtons = document.querySelectorAll('.habitat-btn');
 
         // Initialize
@@ -104,7 +103,6 @@ class QuestCards {
         this.cardTitle.textContent = card.title;
         this.cardBody.textContent = card.body;
         this.cardLocation.textContent = card.habitat;
-        this.updateHabitatIcon(card.habitat);
 
         // Add habitat data attribute to card for individual theming
         this.card.setAttribute('data-card-habitat', card.habitat);

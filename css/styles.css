@@ -2,13 +2,8 @@
    FONTS
    ======================================== */
 
-@font-face {
-    font-family: 'Refraktury';
-    src: url('../fonts/Refraktury.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
+/* Adobe Fonts loaded via <link> in HTML head */
+/* Project: https://use.typekit.net/ydp6htk.css */
 
 /* ========================================
    CSS CUSTOM PROPERTIES (THEMES)
@@ -26,7 +21,7 @@
     --button-active: #8b7355;
 
     /* Typography */
-    --font-display: 'Refraktury', Georgia, serif;
+    --font-display: 'bc-unciala-regular', Georgia, serif;
     --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 
     /* Spacing */
@@ -131,13 +126,13 @@ body {
 
 header {
     text-align: center;
-    padding: var(--space-sm) 0;
+    padding: var(--space-xs) 0 var(--space-sm);
 }
 
 .title {
     font-family: var(--font-display);
     font-size: 3.5rem;
-    font-weight: normal;
+    font-weight: 400;
     color: var(--accent-color);
     margin-bottom: var(--space-xs);
     letter-spacing: 0.05em;
@@ -295,6 +290,7 @@ header {
 .card-back-title {
     font-family: var(--font-display);
     font-size: 18px;
+    font-weight: 400;
     letter-spacing: 0.1em;
 }
 
@@ -312,8 +308,6 @@ header {
     width: 100%;
     height: 100%;
     padding: var(--space-md);
-    border: 2px solid var(--accent-color);
-    border-radius: 8px;
     display: flex;
     flex-direction: column;
 }
@@ -324,9 +318,9 @@ header {
     align-items: center;
     gap: var(--space-sm);
     text-align: center;
-    padding: var(--space-sm) var(--space-md) var(--space-md);
+    padding: var(--space-sm) var(--space-md);
     height: 100%;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .habitat-icon {
@@ -337,12 +331,13 @@ header {
 .card-title {
     font-family: var(--font-display);
     font-size: 1.75rem;
-    font-weight: normal;
+    font-weight: 400;
     color: var(--accent-color);
     line-height: 1.3;
 }
 
 .card-body {
+    font-family: 'bc-parlament', Georgia, serif;
     font-size: 1.1rem;
     line-height: 1.6;
     max-width: 240px;
@@ -355,7 +350,6 @@ header {
     text-transform: uppercase;
     color: var(--accent-color);
     opacity: 0.7;
-    margin-top: auto;
 }
 
 /* ========================================
